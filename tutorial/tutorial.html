@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Git/GitHub SAAO Tutorial  </title>
+
+		<meta name="description" content="Tutorial for GIT/GITHUB at SAAO">
+		<meta name="author" content="Steve Crawford">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../talk/css/reveal.css">
+		<link rel="stylesheet" href="../talk/css/theme/serif.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../talk/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../talk/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+                <link theme='serif'>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Git/GitHub Tutorial for SAAO</h2>
+				</section>
+				<section>
+					<h2>Think of a question you have about git or github.</h2>
+				</section>
+				<section>
+					<h2>Prelimaries</h2>
+ 					<span> 1. Do you have a github account? </span><br>
+ 					<span> If not, go to <a href='http://www.github.com'>http://www.github.com</a> and create an account. </span><br><br>
+					
+ 					<span> 2. Do you have git? </span><br>
+					<span> If not, download it via your <a href='http://git-scm.com/book/en/Getting-Started-Installing-Git'>favorite method</a>.<br>
+				</section>
+				<section>
+				   <section data-transition='none'>
+					<h2>Using Github</h2>
+				   </section>
+                                   <section data-transition='none'>
+                                        <p>Go to <a href='http://github.com/saltastro/saao_git_tutorial'>https://github.com/saltastro/saao_git_tutorial</a> and fork the repository </p>
+                                   </section>
+                                   <section data-transition='none'>
+                                        <p>Once forked, click on the directory 'questions'</p>
+                                   </section>
+
+                                   <section data-transition='none'>
+                                        <p>Now click on the button for new file</p>
+                                   </section>
+
+                                   <section data-transition='none'>
+                                        <p>Create a new file named q_[topic].txt where [topic] is replaced with the subject of your qeustion. EEnter it into your question using the following syntax:</p>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;"> Question: What is the address of the repository </code></pre>
+					<p> And then save the file </p>
+                                   </section>
+
+                                   <section data-transition='none'>
+                                        <p>Finally make a pull request for this new file</p>
+                                   </section>
+
+                                   <section data-transition='none'>
+                                        <p>Congrats you have now added to the SAAO git tutorial repository!</p>
+                                   </section>
+
+
+				</section>
+
+				<section>
+				   <section data-transition='none'>
+					<h2>Using Git</h2>
+				   </section>
+				   <section data-transition='none'>
+					<h3>Download a local copy of your forked proposal</h3>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;"> git clone https://github.com/crawfordsm/saao_git_tutorial.git</code></pre>
+					<p> This link should be copied and pasted from the link from the github page for your forked repository.</p>
+				   </section>
+
+                                   <section data-transition='none'>
+                                        <h3>Update your local repository so you can see everyone else's questions.  This will require you to pull from the reposity that you forked from.  
+					</h3>
+                                        <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;"> git pull https://github.com/saltastro/saao_git_tutorial.git master </code></pre>
+				   </section>
+			           <section data-transition='none'>
+                                        <h3>Select a quesiton that you think you might be able to answer (either your own or someone else's).  Once you have selected it, create a new branch that has the name of that topic
+                                        </h3>
+                                        <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">   git branch repository
+ </code></pre> 
+                                        <h3>Once created, checkout the new branch</h3>
+                                        <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">   git checkout repository </code></pre> 
+                                        <h3>You should be now on that branch</h3>
+
+				   </section>
+                                   <section data-transition='none'>
+                                        <h3>Next update the file with your answer </h3>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;"> 
+Question: What is the address of the repository ?
+
+Answer: https://github.com/saltastro/saao_git_tutorial.git
+
+</code></pre>
+                                   </section>
+                                   <section data-transition='none'>
+                                        <h3>Add your changes.  This stages all of your changes to be committed
+                                        </h3>
+                                        <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">   git add .
+ </code></pre>
+                                   </section>
+                                   <section data-transition='none'>
+                                        <h3>Comit your changes.  This saves the changes that you have made.  You can also add a message when you make the commit
+                                        </h3>
+                                        <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">   git commit -m 'Answer repository question '
+ </code></pre>
+					<h3> Your changes will now be saved to your local repository </h3>
+                                   </section>
+                                   <section data-transition='none'>
+                                        <h3>If you want to save them to your repository on git hub, you will have to 'push' the changes to there
+                                        </h3>
+                                        <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">   git push origin repository 
+ </code></pre>
+                                        <h3> Now check out your github repository and see your changes.  If your answer is a good one and you want to share add it to the main repository, go ahead with a pull request. </h3>
+
+                                   </section>
+
+				</section>
+                                <section>
+                                        <h2>Congratulations! You have just initiated a pull request from your own local branch.  
+                                </section>
+                                <section>                                        <h2>
+There are still a lot more things you can do with git and github, but this should give you the first steps to contributing to a project.   See the <a href='../resources.html'>resources</a> for more examples of how to use git and github!</h2>
+                                </section>
+
+		
+
+
+			</div>
+
+		</div>
+
+		<script src="../talk/lib/js/head.min.js"></script>
+		<script src="../talk/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../talk/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../talk/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../talk/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../talk/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../talk/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../talk/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			
+				
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
