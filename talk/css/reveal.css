@@ -5,7 +5,7 @@
  * http://lab.hakim.se/reveal-js
  * MIT licensed
  *
- * Copyright (C) 2013 Hakim El Hattab, http://hakim.se
+ * Copyright (C) 2014 Hakim El Hattab, http://hakim.se
  */
 
 
@@ -85,6 +85,7 @@ body {
 .reveal h2 { font-size: 2.11em;	}
 .reveal h3 { font-size: 1.55em;	}
 .reveal h4 { font-size: 1em;	}
+
 
 /*********************************************
  * VIEW FRAGMENTS
@@ -294,7 +295,6 @@ body {
 	quotes: none;
 }
 
-
 .reveal blockquote {
 	display: block;
 	position: relative;
@@ -314,8 +314,6 @@ body {
 .reveal q {
 	font-style: italic;
 }
-
-
 
 .reveal pre {
 	display: block;
